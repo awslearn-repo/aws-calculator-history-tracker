@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1273.0.min.js"></script>
+    <script src="myscripts.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AWS Pricing Calculator Repo</title>
+  </head>
+  <body>
+    <div class="bg-dark text-secondary px-4 py-5 text-center">
+      <div class="py-5">
+        <h1 class="display-5 fw-bold text-white">
+          AWS Pricing Calculator Repo
+        </h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="fs-5 mb-4"></p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"></div>
+        </div>
+      </div>
+    </div>
+    <a href="https://d1fdxhfrigcmg6.cloudfront.net">
+      <button class="btn btn-outline-primary m-3">Logout</button></a
+    >
+    <br /><br /><br /><br /><br />
+
+    <div class="container" style="width: 500px">
+      <img
+        src="https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png"
+        class="card-img-top"
+        alt="AWS"
+      />
+    </div>
+    <br /><br />
+
+    <div class="container" style="width: 50rem">
+      <input
+        id="projectName"
+        class="form-control me-2"
+        type="text"
+        placeholder="Project name"
+        aria-label="Project Name"
+      />
+      <br />
+      <input
+        id="awsLink"
+        class="form-control me-2"
+        type="text"
+        placeholder="AWS Calculator Link"
+        aria-label="AWS Calculator Link"
+      />
+      <br />
+      <input
+        id="description"
+        class="form-control me-2"
+        type="text"
+        placeholder="Description"
+        aria-label="Description"
+      />
+      <br />
+      <br />
+      <button id="submitButton" type="button" class="btn btn-outline-primary">
+        Submit
+      </button>
+    </div>
+  </body>
+</html>

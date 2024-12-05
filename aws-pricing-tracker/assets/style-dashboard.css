@@ -1,0 +1,137 @@
+/* Variables */
+:root {
+    --primary-color: #180706; /* Header color */
+    --secondary-color: #0073e6; /* Button color */
+    --hover-color: #005bb5; /* Button hover color */
+    --text-color: #333; /* General text color */
+    --background-color: #f9f9f9; /* Page background color */
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+/* Header Styles */
+.header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Container for Left and Right Panels */
+.container {
+    display: flex;
+    margin: 20px;
+}
+
+/* Left Panel Styles */
+.left-panel {
+    width: 65%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+/* Right Panel Styles */
+.right-panel {
+    width: 35%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+/* Style for the estimates list container */
+#estimates-list {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 10px; /* Space inside the list */
+    max-height: 400px; /* Limit height for scroll */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #ccc; /* Add border for better separation */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.estimate-header, .estimate-item {
+    display: flex;
+    justify-content: space-between; /* Space out elements */
+    padding: 10px; /* Increased padding for touch-friendly interaction */
+    border-bottom: 1px solid #ddd; /* Light border for separation */
+    transition: background-color 0.3s; /* Smooth background change on hover */
+    align-items: center;
+}
+
+.estimate-header {
+    font-weight: bold; /* Make header text bold */
+    background-color: #e0e0e0; /* Distinct background for header */
+}
+
+.estimate-item:hover {
+    background-color: #f0f0f0; /* Highlight on hover */
+}
+
+.estimate-header span, .estimate-item span {
+    padding: 0 10px; /* Space between text */
+    word-wrap: break-word; /* Handle long words */
+    flex: 1; /* Make spans flexible */
+    text-align: left; /* Align text to the left */
+}
+
+.estimate-item button {
+    flex: 1;  /* Make spans flexible */
+   }
+
+
+/* Right Panel Input Styles */
+input[type="text"],
+input[type="url"],
+textarea,
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 15px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+    
+
+/* Search Input */
+#search {
+    margin-bottom: 10px;
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.footer {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 80px; /* Set a height for the footer */
+    margin-top: 20px;
+}
