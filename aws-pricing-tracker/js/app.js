@@ -11,9 +11,6 @@ function debugLog(...messages) {
     }
 }
 
-//const docClient = new AWS.DynamoDB.DocumentClient();
-let lastEvaluatedKey = null; // To keep track of the last evaluated key for pagination
-
 /*
 These are the functions
 
@@ -36,17 +33,17 @@ async function handleAuthRedirect() {
   debugLog("authCode:", authCode);
 
   if (authCode) {
-    // Exchange code for tokens
-    const response = await fetch('https://calcrepo.auth.us-east-1.amazoncognito.com/oauth2/token', {
+    // Exchange code for tokens. Replace your details as applicable for Cognito configuration
+    const response = await fetch('https://nnnnnnnn.auth.us-east-1.amazoncognito.com/oauth2/token', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
       body: new URLSearchParams({
         grant_type: 'authorization_code',
-        client_id: '8c8kssktr0fpreogn2t6q70qr',
+        client_id: '8c8kssktr0fpreogn2t',   // Replace with your Cognito client ID
         code: authCode,
-        redirect_uri: 'https://d1fdxhfrigcmg6.cloudfront.net/dashboard.html',
+        redirect_uri: 'https://dnnnnnnnnnn.cloudfront.net/dashboard.html',  // Replace with your redirect URL
       }),
     });
 
@@ -60,10 +57,10 @@ async function handleAuthRedirect() {
     // Configure AWS Cognito Identity Credentials using id_token
     AWS.config.credentials = new AWS.CognitoIdentityCredentials({
       region: "us-east-1",  // Adjust to your AWS region
-      IdentityPoolId: "us-east-1:a00d80ac-735c-413f-af6a-742f8ac78746", // Replace with your Identity Pool ID
+      IdentityPoolId: "us-east-1:a00d80ac--nnnnnn", // Replace with your Identity Pool ID
       Logins: {
          // Cognito User Pool provider name and token for authenticated access
-        'cognito-idp.us-east-1.amazonaws.com/us-east-1_sTC9lAnUU': data.id_token, // Update with your actual User Pool ID
+        'cognito-idp.us-east-1.amazonaws.com/us-east-1nnnnnn': data.id_token, // Update with your actual User Pool ID
       },
     });
 
@@ -133,7 +130,7 @@ async function handleFormSubmit(email) {
     
     // Step 1: Query for existing project versions to generate next version
     const paramsQuery = {
-      TableName: "awscalcculatorhistorytracker",
+      TableName: "awscalcculatorhistorytracker", 
       KeyConditionExpression: "email = :email AND begins_with(project_name_version, :project)",
       ExpressionAttributeValues: {
         ":email": email,
@@ -171,7 +168,7 @@ async function handleFormSubmit(email) {
     // Step 2: Upload file to S3
     const s3 = new AWS.S3();
     const s3Params = {
-      Bucket: "awscalcrepo-exported-files", // S3 bucket name
+      Bucket: "<your bucket name>", // S3 bucket name
       Key: `${email}/${projectVersion}_${fileInput.name}`, // Unique file key (path)
       Body: fileInput,
       ContentType: fileInput.type
