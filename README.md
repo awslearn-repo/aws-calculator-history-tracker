@@ -1,4 +1,4 @@
-# AWS Pricing Calculator Tracker (APCT)
+# AWS Cost Estimate Tracker (ACET)
 
 The **AWS Pricing Calculator** is an online tool provided by Amazon Web Services (AWS) to estimate the cost of using various AWS services. Whether you're starting a small project or planning a large-scale deployment, this tool helps calculate monthly costs for a range of services - from simple EC2 instances to complex architectures using multiple AWS services.
 
@@ -11,9 +11,9 @@ While incredibly useful, the AWS Pricing Calculator has a few limitations:
 
 ---
 
-## Introducing AWS Pricing Calculator Tracker (APCT)
+## Introducing AWS Cost Estimate Tracker (ACET)
 
-The **AWS Pricing Calculator Tracker (APCT)** solves the problem of managing and tracking multiple pricing calculator links. It offers a simple, efficient way to store and access past estimates, track changes, and compare service prices over time.  
+The **AWS Cost Estimate Tracker (ACET)** solves the problem of managing and tracking multiple pricing calculator links. It offers a simple, efficient way to store and access past estimates, track changes, and compare service prices over time.  
 
 APCT also incorporates **Generative AI (GenAI)** capabilities through AWS Bedrock, delivering actionable insights and recommendations based on your estimates.
 
@@ -80,13 +80,13 @@ APCT also incorporates **Generative AI (GenAI)** capabilities through AWS Bedroc
 
 1. Complete your AWS project estimates using the **AWS Pricing Calculator**.  
 2. Copy the sharable link and download the estimate as a PDF.  
-3. Sign up or log in to APCT.  
+3. Sign up or log in to ACET.  
 4. Add your project estimate using a simple form. The project estimates will be displayed in real-time. Changes create a new version entry.  
 5. Download PDFs or open the calculator links from your estimates.  
 6. Click **Analyze** for actionable Generative AI insights.  
 
 ---
 
-## Why APCT?
+## Why ACET?
 
 This tool is designed to make cost estimation and tracking seamless while enabling you to leverage AI-driven insights for AWS cost optimization. 
